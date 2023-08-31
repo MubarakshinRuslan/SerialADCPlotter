@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1131</width>
+    <height>1020</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="lblPort">
+          <property name="text">
+           <string>Выберите порт</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="portList"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblBaudRate">
+          <property name="text">
+           <string>BaudRate</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="baudrateList"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="connectButton">
+          <property name="text">
+           <string>Подключение</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="lblDataBits">
+          <property name="text">
+           <string>DataBits</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbDataBits"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblParity">
+          <property name="text">
+           <string>Parity</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbParity"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblStopBits">
+          <property name="text">
+           <string>StopBits</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbStopBits"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblFlowControl">
+          <property name="text">
+           <string>FlowControl</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbFlowControl"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="disconnectButton">
+          <property name="text">
+           <string>Отключение</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="14">
+         <widget class="Line" name="line_15">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="10">
+         <widget class="Line" name="line_13">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="8">
+         <widget class="Line" name="line_12">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="13">
+         <widget class="QLabel" name="lblCh7">
+          <property name="text">
+           <string>Канал 7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="6">
+         <widget class="Line" name="line_11">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="Line" name="line_18">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="7">
+         <widget class="QCheckBox" name="chFilter4">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="11">
+         <widget class="QCheckBox" name="chFilter6">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="15">
+         <widget class="QLabel" name="lblCh8">
+          <property name="text">
+           <string>Канал 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <widget class="QLabel" name="lblADC3">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="15">
+         <widget class="QCheckBox" name="chFilter8">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="9">
+         <widget class="QLabel" name="lblADC5">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="19">
+         <widget class="QCheckBox" name="chFilter10">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="7">
+         <widget class="QLabel" name="lblADC4">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QCheckBox" name="chFilter2">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="lblADC1">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="lblCh1">
+          <property name="text">
+           <string>Канал 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="19">
+         <widget class="QLabel" name="lblCh10">
+          <property name="text">
+           <string>Канал 10</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="18">
+         <widget class="Line" name="line_17">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QLabel" name="lblCh3">
+          <property name="text">
+           <string>Канал 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLabel" name="lblADC2">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="17">
+         <widget class="QLabel" name="lblCh9">
+          <property name="text">
+           <string>Канал 9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7">
+         <widget class="QLabel" name="lblCh4">
+          <property name="text">
+           <string>Канал 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="13">
+         <widget class="QCheckBox" name="chFilter7">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="9">
+         <widget class="QCheckBox" name="chFilter5">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="lblCurrentData">
+          <property name="text">
+           <string>Текущие значения</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="11">
+         <widget class="QLabel" name="lblCh6">
+          <property name="text">
+           <string>Канал 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="9">
+         <widget class="QLabel" name="lblCh5">
+          <property name="text">
+           <string>Канал 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QCheckBox" name="chFilter3">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLabel" name="lblCh2">
+          <property name="text">
+           <string>Канал 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="Line" name="line_10">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="17">
+         <widget class="QLabel" name="lblADC9">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="16">
+         <widget class="Line" name="line_16">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="15">
+         <widget class="QLabel" name="lblADC8">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="chFilter1">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="13">
+         <widget class="QLabel" name="lblADC7">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="Line" name="line_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="17">
+         <widget class="QCheckBox" name="chFilter9">
+          <property name="text">
+           <string>Фильтр</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="12">
+         <widget class="Line" name="line_14">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="11">
+         <widget class="QLabel" name="lblADC6">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="19">
+         <widget class="QLabel" name="lblADC10">
+          <property name="font">
+           <font>
+            <family>Myanmar Text</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="20">
+         <widget class="Line" name="line_19">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCustomPlot" name="customPlot" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>640</width>
+          <height>300</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="btnVisiblePlot4">
+          <property name="text">
+           <string>Показать график 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="9">
+         <widget class="QPushButton" name="btnVisiblePlot10">
+          <property name="text">
+           <string>Показать график 10</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="btnVisiblePlot3">
+          <property name="text">
+           <string>Показать график 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QPushButton" name="btnVisiblePlot8">
+          <property name="text">
+           <string>Показать график 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="btnVisiblePlot6">
+          <property name="text">
+           <string>Показать график 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btnVisiblePlot2">
+          <property name="text">
+           <string>Показать график 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btnVisiblePlot1">
+          <property name="text">
+           <string>Показать график 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="btnVisiblePlot5">
+          <property name="text">
+           <string>Показать график 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8">
+         <widget class="QPushButton" name="btnVisiblePlot9">
+          <property name="text">
+           <string>Показать график 9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QPushButton" name="btnVisiblePlot7">
+          <property name="text">
+           <string>Показать график 7</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="spacing">
+         <number>50</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Настройки сглаживания</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Alpha:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="leAlpha"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Изменить и перестроить график</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="btnChangeFilterType">
+          <property name="text">
+           <string>Изменить на фильтр с буфером</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Размер буфера:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="leWindow"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="btnMAWindowEdit">
+          <property name="text">
+           <string>Изменить и перестроить график</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="lblXmin">
+          <property name="text">
+           <string>Xmin</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="eXmin"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblXmax">
+          <property name="text">
+           <string>Xmax</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="eXmax"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblYmin">
+          <property name="text">
+           <string>Ymin</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="eYmin"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblYmax">
+          <property name="text">
+           <string>Ymax</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="eYmax"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnUpdatePlotRange">
+          <property name="text">
+           <string>Изменить диапазоны графика</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnClearPlot">
+          <property name="text">
+           <string>Очистить график</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="outputText">
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Сохранение данных</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QPushButton" name="btnOutputSaver">
+           <property name="text">
+            <string>Сохранить содержимое поля вывода в текстовый файл</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnSaveCSV">
+           <property name="text">
+            <string>Сохранить данные в таблицу</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
